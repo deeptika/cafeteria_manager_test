@@ -7,8 +7,17 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to "/home"
     else
-      flash[:error] = "Your login attempt has either an invalid email or password. Please try again."
+      flash[:error] = "Your login attempt used either an invalid email or password. Please try again."
       redirect_to new_sessions_path
+    end
+  end
+
+  def new
+    if current_user
+      redirect_to home_path
+    else
+      @current_user_id = session[:current_user_id]
+      render "new"
     end
   end
 

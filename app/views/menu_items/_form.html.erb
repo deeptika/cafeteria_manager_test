@@ -11,8 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :menu_id %>
+  <%= hidden_field_tag "current_menu_id", @current_menu_id %>
+
+  <div style="visibility: hidden;">
     <%= form.text_field :menu_id %>
   </div>
 
