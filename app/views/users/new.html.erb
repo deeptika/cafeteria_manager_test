@@ -1,5 +1,26 @@
-<h1>New User</h1>
+<section class="NewUserPage">
+  <h1 class="NewUserPage-title">Sign up here!</h1>
 
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', users_path %>
+  <section class="NewUserPage-form">
+    <%= form_with url: users_path do |form| %>
+      <div class="NewUserPage-field">
+        <p class="NewUserForm-title">First Name </p>
+        <%= form.text_field :first_name, class: "NewUserForm-firstNameInput" %>
+      </div>
+      <div class="NewUserPage-field">
+        <p class="NewUserForm-title">Last Name </p>
+        <%= form.text_field :last_name, class: "NewUserForm-lastNameInput" %>
+      </div>
+      <div class="NewUserPage-field">
+        <p class="NewUserForm-title">Email </p>
+        <%= form.email_field :email, class: "NewUserForm-emailInput" %>
+      </div>
+      <div class="NewUserPage-field">
+        <p class="NewUserForm-title">Password </p>
+        <%= form.password_field :password, class: "NewUserForm-passwordInput" %>
+      </div>
+      <%= form.submit "I'm done!", class: "NewUserForm-submitButton" %>
+      <%= hidden_field_tag "role", "customer" %>
+    <% end %>
+  </section>
+<section>

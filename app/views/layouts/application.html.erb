@@ -5,11 +5,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
+    <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
   </head>
 
-  <body>
+  <body class="MainPage">
+    <% if @current_user %>
+      <p class="UserLogin-success">
+        Hi <%= @current_user.first_name %>!
+        <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+      </p>
+    <% end %>
+
+    <% if flash[:error] %>
+      <p class="UserLogin-failure">
+        <%= flash[:error] %>
+      </p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

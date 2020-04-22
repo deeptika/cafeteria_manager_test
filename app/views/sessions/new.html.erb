@@ -1,0 +1,19 @@
+<section class="LoginPage">
+  <h1 class="LoginPage-title"> Log in to your account here </h1>
+  <section class="LoginForm">
+    <%= form_with url: sessions_path do |form| %>
+      <div class="LoginForm-field">
+        <p class="LoginForm-fieldTitle">Email </p>
+        <%= form.email_field :email, class: "LoginForm-emailInput" %>
+      </div>
+      <div class="LoginForm-field">
+        <p class="LoginForm-fieldTitle">Password </p>
+        <%= form.password_field :password, class: "LoginForm-passwordInput" %>
+      </div>
+      <%= form.submit "Sign in", class: "LoginForm-submitButton" %>
+    <% end %>
+  </section>
+  <p class="LoginPage-newUserLink">
+      <%= link_to "New here? Create a free account now!", new_user_path %>
+  </p>
+</section>
