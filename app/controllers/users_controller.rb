@@ -33,11 +33,19 @@ class UsersController < ApplicationController
       role: params[:role],
     )
     if user_new.save
-      session[:current_user_id] = user_new.id
-      redirect_to "/home"
+      if user_new.role != "customer"
+        redirect_to clerks_path
+      else
+        session[:current_user_id] = user_new.id
+        redirect_to "/home"
+      end
     else
       flash[:error] = user_new.errors.full_messages.join(", ")
-      redirect_to new_user_path
+      if user_new.role == "customer"
+        redirect_to new_user_path
+      else
+        redirect_to new_clerk_path
+      end
     end
   end
 
@@ -59,10 +67,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to clerks_path(:notice => "User was successfully deleted.")
   end
 
   private

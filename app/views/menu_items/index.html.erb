@@ -23,7 +23,7 @@
         <% if @current_user.role == "owner" %>
           <td class="MenuItemTable-tableValue"><%= link_to "Show", menu_item %></td>
           <td class="MenuItemTable-tableValue"><%= link_to "Edit", edit_menu_item_path(menu_item) %></td>
-          <td class="MenuItemTable-tableValue"><%= link_to "Destroy", menu_item, method: :delete, data: { confirm: "Are you sure?" } %></td>
+          <td class="MenuItemTable-tableValue"><%= link_to "Delete", menu_item, method: :delete, data: { confirm: "Are you sure?" } %></td>
         <% end %>
       </tr>
     <% end %>
@@ -32,7 +32,7 @@
 
 <% if @current_user.role == "owner" %>
 <h3 class="MenuItemHeader-title"> Select Menu </h3>
-<%= render partial: "_select-menu", locals: {
+<%= render partial: "select-menu", locals: {
              menu_id: @current_menu_id,
            } %>
 <p class="MenuItemHeader-newMenuItemLink">

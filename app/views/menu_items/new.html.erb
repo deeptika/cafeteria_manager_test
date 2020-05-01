@@ -10,10 +10,6 @@
     <p class="MenuItemForm-fieldTitle">Menu Item Price </p>
     <%= form.text_field :menu_item_price, class: "MenuItemForm-menuItemPriceInput" %>
   </div>
-  <div class="MenuItemForm-field">
-    <p class="MenuItemForm-fieldTitle">Stock </p>
-    <%= form.text_field :stock, class: "MenuItemForm-menuItemStockInput" %>
-  </div>
   <%= form.submit "Add Item", class: "MenuItemForm-submitButton" %>
   <%= hidden_field_tag "menu_id", @current_menu_id %>
 <% end %>
