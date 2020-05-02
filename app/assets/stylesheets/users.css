@@ -1,3 +1,87 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.NewUserPage {
+  max-width: 2000px;
+  margin: 200px auto;
+  font-family: sans-serif;
+  align-items: center;
+}
+
+.NewUserPage-title {
+  font-size: 32px;
+  color: rgb(216, 98, 1);
+  text-align: center;
+}
+
+.NewUserForm {
+  background-image: linear-gradient(rgb(211, 208, 205),rgb(223, 220, 217));
+  display: flex;
+  margin: 50px auto;
+  max-width: 800px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.NewUserForm-field {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+}
+
+.NewUserForm-fieldTitle {
+  padding-top: 5px;
+  font-size: 20px;
+  color: rgb(104, 102, 101);
+  font-weight: 1000;
+}
+
+.NewUserForm-firstNameInput {
+  margin-left: 80px;
+  margin-top: 17px;
+  height: 25px;
+  border: 1px solid rgb(151, 150, 149);
+  border-radius: 4px;
+  background-color: white;
+}
+
+.NewUserForm-lastNameInput {
+  margin-left: 80px;
+  margin-top: 17px;
+  height: 25px;
+  border: 1px solid rgb(151, 150, 149);
+  border-radius: 4px;
+  background-color: white;
+}
+
+.NewUserForm-emailInput {
+  margin-left: 80px;
+  margin-top: 17px;
+  height: 25px;
+  border: 1px solid rgb(151, 150, 149);
+  border-radius: 4px;
+  background-color: white;
+}
+
+.NewUserForm-passwordInput {
+  margin-left: 40px;
+  margin-top: 17px;
+  height: 25px;
+  border: 1px solid rgb(151, 150, 149);
+  border-radius: 4px;
+  background-color: white;
+}
+
+.NewUserForm-submitButton {
+  margin-left: 40%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  height: 50px;
+  border: 1px solid rgb(216, 98, 1);
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(216, 98, 1),rgb(212, 129, 46));
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
