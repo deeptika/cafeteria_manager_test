@@ -1,6 +1,6 @@
 .LoginPage {
-  max-width: 600px;
-  margin: 500px auto;
+  max-width: 1000px;
+  margin: 200px auto;
   font-family: sans-serif;
   align-items: center;
 }
@@ -12,18 +12,20 @@
 }
 
 .LoginForm {
-  background-image: linear-gradient(rgb(211, 208, 205),rgb(214, 212, 210));
+  background-image: linear-gradient(rgb(211, 208, 205),rgb(223, 220, 217));
+  display: flex;
   margin: 50px auto;
-  max-width: 600px;
+  max-width: 800px;
   border: 1px solid transparent;
-  border-radius: 75px;
-  box-shadow: 0 5px 20px 0px rgba(3, 1, 1, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .LoginForm-field {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  padding-left: 20%;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
 }
 
@@ -53,7 +55,7 @@
 }
 
 .LoginForm-submitButton {
-  margin-left: 45%;
+  margin-left: 40%;
   margin-top: 20px;
   margin-bottom: 50px;
   height: 50px;
