@@ -1,14 +1,15 @@
-<p id="notice"><%= notice %></p>
+<section class="ShowMenuPage">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Menu name:</strong>
-  <%= @menu.menu_name %>
-</p>
+  <p class="ShowMenuPage-menuDetails">
+    <strong>Menu name: </strong><%= @menu.menu_name %>
+  </p>
 
-<p>
-  <strong>Active:</strong>
-  <%= @menu.active %>
-</p>
+  <p class="ShowMenuPage-menuDetails">
+    <i>This menu is <%= @menu.active ? "active now." : "not active now. Do keep checking for updates!" %></i>
+  </p>
 
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
+  <p class="ShowMenuPage-link">
+    <%= link_to "Edit", edit_menu_path(@menu) %> | <%= link_to "Back", menus_path %>
+  </p>
+</section>

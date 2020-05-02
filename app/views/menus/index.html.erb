@@ -1,29 +1,34 @@
-<p id="notice"><%= notice %></p>
+<section class="MenuPage">
+  <p id="notice"><%= notice %></p>
 
-<h1>Menus</h1>
+  <div class="MenuHeader">
+    <h1 class="MenuHeader-title">Menus</h1>
+    <p class="MenuHeader-newMenuLink"><%= link_to "New Menu", new_menu_path %></p>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Menu name</th>
-      <th>Active</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @menus.each do |menu| %>
+  <table class="MenuTable">
+    <thead class="MenuTable-head">
       <tr>
-        <td><%= menu.menu_name %></td>
-        <td><%= menu.active %></td>
-        <td><%= link_to "Show", menu %></td>
-        <td><%= link_to "Edit", edit_menu_path(menu) %></td>
-        <td><%= link_to "Delete", menu, method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <th class="MenuTable-column1Header">Menu name</th>
+        <th class="MenuTable-column2Header">Active?</th>
+        <th class="MenuTable-column3Header"colspan="3">Options</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody class="MenuTable-body">
+      <% @menus.each do |menu| %>
+        <tr>
+          <td class="MenuTable-tableValue"><%= menu.menu_name %></td>
+          <td class="MenuTable-tableValue"><%= menu.active ? "Yes" : " " %></td>
+          <td class="MenuTable-tableValue">[ <%= link_to "Show", menu %></td>
+          <td class="MenuTable-tableValue"><%= link_to "Edit", edit_menu_path(menu) %></td>
+          <td class="MenuTable-tableValue"><%= link_to "Delete", menu, method: :delete, data: { confirm: "Are you sure?" } %> ]</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to "New Menu", new_menu_path %>
+  <br>
+
+
+</section>

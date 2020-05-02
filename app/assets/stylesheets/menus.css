@@ -1,3 +1,166 @@
-// Place all the styles related to the Menus controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.MenuPage, .NewMenuPage, .ShowMenuPage, .EditMenuPage {
+  max-width: 1000px;
+  margin: 100px auto;
+  font-family: sans-serif;
+  align-items: center;
+}
+
+.MenuHeader {
+  display: flex;
+}
+
+.MenuHeader-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+  color: rgb(104,102,101);
+}
+
+.NewMenuPage-title, .EditMenuPage-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+  color: rgb(216,98,1);
+}
+
+.MenuHeader-newMenuLink {
+  margin-left: 850px;
+  padding-top: 90px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.MenuTable {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.MenuTable-head {
+  background-image: linear-gradient(rgb(251, 96, 34),rgb(243, 136, 49));
+  color: white;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.MenuTable-body {
+  max-height: 585px;
+  overflow: auto;
+}
+
+.MenuTable-column1Header {
+  border: 3px solid rgb(216,98,1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+}
+
+.MenuTable-column2Header {
+  border: 3px solid rgb(216,98,1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 20%;
+}
+
+.MenuTable-column3Header {
+  border: 3px solid rgb(216,98,1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 30%;
+}
+
+.MenuTable-tableValue {
+  font-size: 20px;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: rgb(250, 240, 240);
+}
+
+.MenuForm {
+  background-image: linear-gradient(rgb(211, 208, 205),rgb(223, 220, 217));
+  display: flex;
+  margin: 50px auto;
+  max-width: 500px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.MenuForm-field {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+}
+
+.MenuForm-fieldTitle {
+  padding-top: 5px;
+  font-size: 20px;
+  color: rgb(104, 102, 101);
+  font-weight: 1000;
+}
+
+.MenuForm-menuNameInput {
+  margin-left: 50px;
+  margin-top: 17px;
+  height: 25px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.MenuForm-menuActiveInput {
+  margin-left: 100px;
+  margin-top: 17px;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+}
+
+.MenuForm-submitButton {
+  margin-left: 40%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  height: 50px;
+  border: 1px solid rgb(216, 98, 1);
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(216, 98, 1),rgb(212, 129, 46));
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.NewMenuPage-link, .ShowMenuPage-link, .EditMenuPage-link {
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+.ShowMenuPage {
+  border: 1px solid transparent;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px 0px rgba(3, 1, 1, 0.1);
+}
+
+.ShowMenuPage-menuDetails {
+  font-size: 40px;
+  color: rgb(218, 66, 6);
+  text-align: center;
+}

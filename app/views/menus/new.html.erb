@@ -1,5 +1,7 @@
-<h1>New Menu</h1>
+<section class="NewMenuPage">
+  <h1 class="NewMenuPage-title">New Menu</h1>
 
-<%= render 'form', menu: @menu %>
+  <%= render "form", menu: @menu %>
 
-<%= link_to 'Back', menus_path %>
+  <p class="NewMenuPage-link"><%= link_to "Back", menus_path %></p>
+</section>

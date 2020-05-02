@@ -1,27 +1,27 @@
-<%= form_with(model: menu, local: true) do |form| %>
-  <% if menu.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+<section class="MenuForm">
+  <%= form_with(model: menu, local: true) do |form| %>
+    <% if menu.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
 
-      <ul>
-        <% menu.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% menu.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="MenuForm-field">
+      <p class="MenuForm-fieldTitle">Menu Name</p>
+      <%= form.text_field :menu_name, class: "MenuForm-menuNameInput" %>
     </div>
+
+    <div class="MenuForm-field">
+      <p class="MenuForm-fieldTitle">Active</p>
+      <%= form.check_box :active, class: "MenuForm-menuActiveInput" %>
+    </div>
+
+    <%= form.submit "Submit", class: "MenuForm-submitButton" %>
   <% end %>
-
-  <div class="field">
-    <%= form.label :menu_name %>
-    <%= form.text_field :menu_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</section>
